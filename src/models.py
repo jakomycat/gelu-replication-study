@@ -13,14 +13,13 @@ class MNISTClassification(nn.Module):
         ]
 
         # Hidden layers 
-        for _ in range(8):
+        for _ in range(6):
             layers.append(nn.Linear(128, 128))
             layers.append(activation)
             layers.append(nn.Dropout(p=dropout_rate))
         
         # Output layer
-        layers.append(nn.Linear(128, 10))
-        layers.append(activation) 
+        layers.append(nn.Linear(128, 10)) 
 
         self.architecture = nn.Sequential(*layers)
 

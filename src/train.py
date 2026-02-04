@@ -27,7 +27,7 @@ def train_step(dataloader, device, model, loss_function, optimizer):
 
     # Obtain mean of loss and accuracy
     final_loss = train_loss / len(dataloader)
-    final_acc = train_acc / len(dataloader)
+    final_acc = train_acc / len(dataloader.dataset)
 
     return final_loss, final_acc
 
@@ -51,7 +51,7 @@ def test_step(dataloader, device, model, loss_function):
     
     # Obtain mean of loss and accuracy
     final_loss = test_loss / len(dataloader)
-    final_acc = test_acc / len(dataloader)
+    final_acc = test_acc / len(dataloader.dataset)
 
     return final_loss, final_acc
 
