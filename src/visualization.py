@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import os
 
 def plot_mnist_classification(all_history, save_dir):
-    fig, axs = plt.subplots(1, 2, figsize=(24, 7))
+    fig, axs = plt.subplots(1, 2, figsize=(20, 7))
 
     # Loop
     for history in all_history:
@@ -41,6 +41,9 @@ def plot_mnist_classification(all_history, save_dir):
 
     axs[0].set_ylabel("Log Loss")
     axs[1].set_ylabel("Log Loss")
+
+    axs[0].set_ylim(0.0, 0.14)
+    axs[1].set_ylim(0.0, 0.5)
 
     plt.legend()
             
