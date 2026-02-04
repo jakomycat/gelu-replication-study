@@ -13,7 +13,7 @@ def plot_mnist_classification(all_history, save_dir):
         epochs = range(1, len(loss_train) + 1)
 
         #
-        if "within" in history:
+        if "without" in history:
             if "ReLU" in history:
                 axs[0].plot(epochs, loss_train, color="green", label="ReLU")
                 axs[0].plot(epochs, loss_test, color="green", alpha=0.5)

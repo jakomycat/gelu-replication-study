@@ -25,7 +25,7 @@ else:
 # 
 experiments_config = [
     {
-        "name": "GELU within dropout",
+        "name": "GELU without dropout",
         "activation": nn.GELU(approximate="tanh"),
         "dropout": 0.0
     },
@@ -35,7 +35,7 @@ experiments_config = [
         "dropout": 0.5
     },
     {
-        "name": "ELU within dropout",
+        "name": "ELU without dropout",
         "activation": nn.ELU(alpha=1.0),
         "dropout": 0.0
     },
@@ -45,7 +45,7 @@ experiments_config = [
         "dropout": 0.5
     },
     {
-        "name": "ReLU within dropout",
+        "name": "ReLU without dropout",
         "activation": nn.ReLU(),
         "dropout": 0.0
     },
